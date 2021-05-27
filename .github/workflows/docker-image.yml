@@ -14,15 +14,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: crear imagen docker
+    
+    - name: Crear imagen docker
       run: docker build -t ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:latest .
-    - name: push imagen docker
+    
+    - name: Push imagen docker
       run: docker push ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
-    - name: logout docker
+    
+    - name: Logout docker
       run:
         docker logout
