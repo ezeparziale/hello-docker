@@ -1,0 +1,6 @@
+version: '3'
+services:
+  hello-docker:
+    image: ezeparziale/hello-docker:latest
+    ports:
+      - 3000:3000
