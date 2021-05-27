@@ -19,7 +19,7 @@ jobs:
         DOCKER_USER: ${{  secrets.DOCKER_USER  }}
         DOCKER_PASSWORD: ${{  secrets.DOCKER_PASSWORD  }}
       run:
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        docker login --username $DOCKER_USER --password-stdin $DOCKER_PASSWORD
     - name: crear imagen docker
       run: docker build -t ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:latest .
     - name: push imagen docker
