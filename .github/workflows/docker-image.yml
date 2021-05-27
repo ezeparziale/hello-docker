@@ -26,7 +26,3 @@ jobs:
     
     - name: Push imagen docker
       run: docker push ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
-    
-    - name: Logout docker
-      run:
-        docker logout
