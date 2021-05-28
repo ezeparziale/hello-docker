@@ -6,7 +6,7 @@ FROM node:16-alpine
 RUN mkdir -p /home/hello-docker
 
 # copiamos todo el contenido a la imagen de docker
-COPY . /home/hello-docker
+COPY ./src /home/hello-docker
 
 # seteamos el directorio de trabajo
 WORKDIR /home/hello-docker
