@@ -1,4 +1,6 @@
 notes.md
 node_modules
 package-lock.json
-package.json
+.env
+nba_data
+docker-compose-mongodb.yaml

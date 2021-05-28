@@ -1,0 +1,14 @@
+{
+  "name": "hello-docker",
+  "version": "1.0.0",
+  "description": "Template node.js con mongo, utilizando imagenes docker",
+  "main": "index.js",
+  "author": "@ezeparziale",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.12.12"
+  }
+}

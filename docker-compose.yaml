@@ -2,5 +2,14 @@ version: '3'
 services:
   hello-docker:
     image: ezeparziale/hello-docker:latest
+    environment: 
+      - HOST: localhost
+      - PORT: 3000
+      - DB_HOST: localhost
+      - DB_NAME: nba
+      - DB_COLLECTION: players
+      - DB_PORT: 27017
+      - DB_USER: admin
+      - DB_PASS: password
     ports:
       - 3000:3000

@@ -11,11 +11,8 @@ COPY ./src /home/hello-docker
 # seteamos el directorio de trabajo
 WORKDIR /home/hello-docker
 
-# instalamos npm
+# instalamos los paquetes necesarios
 RUN npm install
 
-# instalamos express
-RUN npm install express
-
-# ejecutamos node server.js
-CMD ["node", "server.js"]
+# ejecutamos node index.js
+CMD ["node", "index.js"]
