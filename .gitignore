@@ -4,3 +4,4 @@ package-lock.json
 .env
 nba_data
 docker-compose-mongodb.yaml
+.dockerignore
