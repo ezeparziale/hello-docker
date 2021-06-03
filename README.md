@@ -10,8 +10,9 @@ mini web con mongodb
 * [x] inicializacion de bd
 * [x] creacion de imagen
 * [x] actualizacion de docker-compose 
-* [ ] visualizacion de datos en la pagina
+* [x] visualizacion de datos en la pagina
 * [x] creacion de package v1
+* [ ] busqueda por campos
 
 ## run
 
