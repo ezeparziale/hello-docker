@@ -1,76 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= titulo  %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik&display=swap" rel="stylesheet">
-  </head>
-  <body>
- 
-    
-    <%
-      var list = '';
-      if (playersLists.length == 0){
-        list = '<h4>Sin datos</h4>';
-      }
-      list += '<table id="tabla_nba" border="1">';
-      list += '<tr>';
-      list += '<th>Full Name</th>';
-      list += '<th>Team</th>';
-      list += '<th>POS</th>';
-      list += '<th>AGE</th>';
-      list += '<th>GP</th>';
-      list += '<th>MPG</th>';
-      list += '<th>MIN%</th>';
-      list += '<th>USG%</th>';
-      list += '<th>TO%</th>';
-      list += '<th>FTA</th>';
-      list += '<th>FT%</th>';
-      list += '<th>2PA</th>';
-      list += '<th>2P%</th>';
-      list += '<th>3PA</th>';
-      list += '<th>3P%</th>';
-      list += '<th>eFG%</th>';
-      list += '<th>TS%</th>';
-      list += '<th>PPG</th>';
-      list += '<th>RPG</th>';
-      list += '<th>TRB%</th>';
+    <head>
+        <title><%= titulo  %></title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type = "text/css" href="stylesheets/style.css">
+    </head>
+    <body>
+        <div class="center">
+            <div class="row">
+                <div class="column">
+                    <img class="buscar-form__logo" src="images/logo.png" alt="Logo">
+                </div>
+                <div class="column">
+                    <div class="titulo">
+                        hello-docker ;) NBA<br/><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      list += '</tr>';
-
-      for (x = 0; x < playersLists.length; x++) {
-        list += '<tr>';
-        list += '<td>'+ playersLists[x].FULL_NAME + '</td>';
-        list += '<td>'+ playersLists[x].TEAM +'</td>';
-        list += '<td>'+ playersLists[x].POS +'</td>';
-        list += '<td>'+ playersLists[x].AGE +'</td>';
-        list += '<td>'+ playersLists[x].GP +'</td>';
-        list += '<td>'+ playersLists[x].MPG +'</td>';
-        list += '<td>'+ playersLists[x].MIN_pct +'</td>';
-        list += '<td>'+ playersLists[x].USG_pct +'</td>';
-        list += '<td>'+ playersLists[x].TO_pct +'</td>';
-        list += '<td>'+ playersLists[x].FTA +'</td>';
-        list += '<td>'+ playersLists[x].FT_pct +'</td>';
-        list += '<td>'+ playersLists[x].twoPA +'</td>';
-        list += '<td>'+ playersLists[x].twoP_pct +'</td>';
-        list += '<td>'+ playersLists[x].threePA +'</td>';
-        list += '<td>'+ playersLists[x].threeP_pct +'</td>';
-        list += '<td>'+ playersLists[x].eFG_pct +'</td>';
-        list += '<td>'+ playersLists[x].TS_pct +'</td>';
-        list += '<td>'+ playersLists[x].PPG +'</td>';
-        list += '<td>'+ playersLists[x].RPG +'</td>';
-        list += '<td>'+ playersLists[x].TRB_pct +'</td>';
-        list += '</tr>';
-      }
-      list += '</table>';
-
-    %>
-    <%- list %>
-
-
-    
-
-
-
-  </body>
+        <form class="buscar-form" action="/players" method="POST">
+            <div class="buscar-form__content">
+                <div class="buscar-form__header">Busqueda por campo</div>
+                    <label for="campo">Campo:</label>
+                    <select id="campo" type="text" class="buscar-form__input" name=campo>
+                        <option value="0">Todo</option>
+                        <option value="FULL_NAME">Nombre jugador</option>
+                        <option value="TEAM">Equipo</option>
+                        <option value="AGE">Edad</option>
+                    </select>
+                    <label for="valor">Valor:</label>
+                    <input class="buscar-form__input" type="text" name="valor" placeholder="Ingrese valor">
+                    <button class="buscar-form__button" type="submit">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </body>
 </html>

@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Faster+One&display=swap');
+
+/*CSS body*/
 body {
-  padding: 50px;
+  background: #0a3865;
+  margin: 15px;
+  margin-top: 50px;
+
 }
+
+.titulo {
+  font-family: 'Faster One';
+  font-size: 60px;
+  color: white
+}
+
 
 a {
   color: #00B7FF;
 }
 
 input[type=submit] {
-  background-color: #ff6600; 
+  background-color: #ac162d; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -26,12 +40,12 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   color: grey;
 }
 
 input[type=text]:focus {
-  border: 3px solid #555;
+  border: 3px solid #ac162d;
 }
 
 .collapsible{
@@ -47,7 +61,7 @@ input[type=text]:focus {
 }
 
 .active, .collapsible:hover {
-  background-color: #ff6600;
+  background-color: #ac162d;
 }
 
 .content {
@@ -59,7 +73,7 @@ input[type=text]:focus {
 
 
 #tabla_nba {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   border-collapse: collapse;
   width: 100%;
 }
@@ -70,9 +84,13 @@ input[type=text]:focus {
   text-align: center;
 }
 
-#tabla_nba tr:nth-child(even){
+#tabla_nba tr:nth-child(2n+1){
   background-color: #f2f2f2;  
 }
+
+#tabla_nba tr:nth-child(2n){
+  background-color: #f2f2f2;  
+} 
 
 #tabla_nba tr:hover {
   background-color: #ddd;  
@@ -82,18 +100,18 @@ input[type=text]:focus {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #ff6600;
+  background-color: #ac162d;
   color: white;
-  font-family: 'Rubik'
+  font-family: 'Roboto'
 }
 
 label {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   size: 22px;
 }
 
 h1 {
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Roboto';
   font-size: 36px;
   margin-left: 0;
   margin-right: 0;
@@ -104,11 +122,110 @@ h4 {
   font-family: 'Roboto';
   font-size: 16px;
   display: inline;
+  color: white
 }
 
-h5 {
-  font-family: 'Rubik';
-  font-size: 13px;
-  color: #white;
-  display: inline;
+
+/* CSS para busqueda*/
+
+.buscar-form,
+.buscar-form * {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buscar-form {
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.buscar-form__logo-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.buscar-form__logo {
+    display: block;
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.buscar-form__content {
+    padding: 30px;
+    background: #eeeeee;
+}
+
+.buscar-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333333;
+}
+
+.buscar-form__input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.buscar-form__input:focus {
+    border-color: #C9082A;
+    border-radius: 5px;
+}
+
+
+.buscar-form__input::placeholder {
+    color: #aaaaaa;
+}
+
+.buscar-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #C9082A;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buscar-form__button:active {
+    background: #17408B;
+}
+
+.buscar-form__links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.buscar-form__link {
+    font-size: 0.9em;
+    color: #C9082A;
+    text-decoration: none;
+}
+
+
+/**/
+.column {
+  float: left;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row {
+  margin: 10px 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
