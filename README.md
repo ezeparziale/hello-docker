@@ -1,6 +1,6 @@
 ## hello-docker
 
-template basico para generar imagenes docker utilizando git actions y subiendolas al docker hub.
+Template basico para generar imagenes docker utilizando git actions y subiendolas al docker hub.
 
 ## to do
 
@@ -12,7 +12,7 @@ mini web con mongodb
 * [x] actualizacion de docker-compose 
 * [x] visualizacion de datos en la pagina
 * [x] creacion de package v1
-* [ ] busqueda por campos
+* [x] busqueda por campos
 
 ## run
 
@@ -45,4 +45,4 @@ http:\\localhost:27017
 
 v1: imagen docker con pagina node.js, inicializacion de db en mongodb con datos de estadisticas de jugadores de nba. Archivo docker-compose listo para ejecutar.  
 
-v2: en desarollo.. (node visualizando data de mongodb)
+v2: se mejoro la web para realizar busquedas por campos. Se deja lista la imagen docker.
