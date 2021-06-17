@@ -32,5 +32,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: peterevans/dockerhub-description
-        readme-filepath: ././README.md
+        repository: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
+        readme-filepath: ./README.md
