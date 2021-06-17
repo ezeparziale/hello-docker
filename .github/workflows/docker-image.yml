@@ -33,4 +33,3 @@ jobs:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
-        readme-filepath: ./README.md
