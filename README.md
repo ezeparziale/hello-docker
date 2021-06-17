@@ -1,48 +1,66 @@
-## hello-docker
+# hello-docker
 
-Template basico para generar imagenes docker utilizando git actions y subiendolas al docker hub.
+Template basico para generar imagenes docker utilizando git actions y subiendolas al docker hub.  
 
-## to do
+La pagina web se monta sobre nodejs, se crea una base de datos mongodb con información de estadisticas de la nba. Se crea un volumen persistente para que no se pierdan los datos.
 
-mini web con mongodb
+Utilizado:
+- [X] node.js
+- [X] mongodb
+- [X] mongo-express
+- [X] docker image
+- [X] docker compose
+- [X] docker hub
+- [X] docker volume
+- [X] docker network
+- [X] github actions
+- [X] github package
+ 
 
-* [x] conexion con mongodb
-* [x] inicializacion de bd
-* [x] creacion de imagen
-* [x] actualizacion de docker-compose 
-* [x] visualizacion de datos en la pagina
-* [x] creacion de package v1
-* [x] busqueda por campos
+## Pagina web
 
-## run
+![home-img](./src/public/images/home-page.png)
 
-start
+![data-img](./src/public/images/data-page.png)
+
+
+## Ejecución
+
+Para ejecutar solo hay que correr el archivo docker compose y listo.  
+
+#### start
 ```docker
 docker-compose -f "docker-compose.yaml" up -d
 ```
 
-stop
+#### stop
 ```docker
 docker-compose -f "docker-compose.yaml" down
 ```
 
-browser mongo-express
+#### browser mongo-express
 ```
 http:\\localhost:8080
 ```
+![data-img](./src/public/images/mongo-express-page.png)  
 
-browser index
+
+#### browser web page
 ```
 http:\\localhost:3000
 ```
 
-browser mongodb
+#### browser mongodb
 ```
 http:\\localhost:27017
 ```
 
-## log
+## Log
 
 v1: imagen docker con pagina node.js, inicializacion de db en mongodb con datos de estadisticas de jugadores de nba. Archivo docker-compose listo para ejecutar.  
 
-v2: se mejoro la web para realizar busquedas por campos. Se deja lista la imagen docker.
+v2: se mejoro la web para realizar busquedas por campos. Se deja lista la imagen docker.  
+
+
+## Comentarios
+- Cualquier cosa me avisan!!! Estoy en linea ;)
