@@ -33,4 +33,4 @@ jobs:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: peterevans/dockerhub-description
-        readme-filepath: ./README.md
+        readme-filepath: ././README.md
