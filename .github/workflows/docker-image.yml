@@ -34,4 +34,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
         short-description: ${{ github.event.repository.description }}
-        readme-filepath: https://raw.githubusercontent.com/ezeparziale/hello-docker/master/README.md
+        readmeFilepath: './README.md'
