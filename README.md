@@ -19,9 +19,9 @@ Utilizado:
 
 ## Pagina web
 
-![home-img](./src/public/images/home-page.png)
+![home-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/home-page.png)
 
-![data-img](./src/public/images/data-page.png)
+![data-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/data-page.png)
 
 
 ## Ejecución
@@ -42,7 +42,7 @@ docker-compose -f "docker-compose.yaml" down
 ```
 http:\\localhost:8080
 ```
-![data-img](./src/public/images/mongo-express-page.png)  
+![data-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/mongo-express-page.png)  
 
 
 #### browser web page
@@ -53,6 +53,11 @@ http:\\localhost:3000
 #### browser mongodb
 ```
 http:\\localhost:27017
+```
+
+## Git Hub repo
+```
+https://github.com/ezeparziale/hello-docker
 ```
 
 ## Log
