@@ -30,6 +30,11 @@ jobs:
         push: true
         tags: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:2.0, ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:latest
   
+  dockerHubDescription:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+ 
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
