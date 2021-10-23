@@ -2,9 +2,12 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master
+    paths:
+      - README.md
+      - .github/workflows/docker-image.yml
+
 
 jobs:
 
@@ -26,11 +29,16 @@ jobs:
       with:
         push: true
         tags: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:3.0, ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}:latest
-
+  
+  dockerHubDescription:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+ 
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: peterevans/dockerhub-description
-        readme-filepath: ./README.md
+        repository: ${{  secrets.DOCKER_USER  }}/${{ github.event.repository.name }}
+        short-description: ${{ github.event.repository.description }}
