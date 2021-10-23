@@ -42,7 +42,7 @@ docker-compose -f "docker-compose.yaml" down
 ### browser mongo-express
 
 ```http
-http:\\localhost:8080
+http://localhost:8080
 ```
 
 ![data-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/mongo-express-page.png)  
@@ -50,13 +50,13 @@ http:\\localhost:8080
 ### browser web page
 
 ```http
-http:\\localhost:3000
+http://localhost:3000
 ```
 
 ### browser mongodb
 
 ```http
-http:\\localhost:27017
+http://localhost:27017
 ```
 
 ## Git Hub repo
