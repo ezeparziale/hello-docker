@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   mongodb:
     image: mongo:4.4.6
     ports:
@@ -22,6 +23,7 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongodb
     networks: 
       - hello-docker-net
+
   hello-docker:
     image: ezeparziale/hello-docker:latest
     environment: 
@@ -38,11 +40,13 @@ services:
       - 3000:3000
     networks: 
       - hello-docker-net
+
 volumes:
   mongo-data:
     driver: local
   mongo-config:
     driver: local
+
 networks:
   hello-docker-net:
     name: hello-docker-net
