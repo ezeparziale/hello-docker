@@ -1,4 +1,4 @@
-# hello-docker
+# 👋🐳 hello-docker
 
 Template basico para generar imagenes docker utilizando git actions y subiendolas al docker hub.  
 
@@ -17,13 +17,13 @@ Utilizado:
 - [X] github actions
 - [X] github package
 
-## Pagina web
+## 🌐 Pagina web
 
 ![home-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/home-page.png)
 
 ![data-img](https://raw.githubusercontent.com/ezeparziale/hello-docker/master/src/public/images/data-page.png)
 
-## Ejecución
+## 🏃 Ejecución
 
 Para ejecutar solo hay que correr el archivo docker compose y listo.  
 
@@ -59,13 +59,13 @@ http://localhost:3000
 http://localhost:27017
 ```
 
-## Git Hub repo
+## 📦 Git Hub repo
 
 ```http
 https://github.com/ezeparziale/hello-docker
 ```
 
-## Log
+## 📓 Log
 
 v1: imagen docker con pagina node.js, inicializacion de db en mongodb con datos de estadisticas de jugadores de nba. Archivo docker-compose listo para ejecutar.  
 
@@ -73,6 +73,6 @@ v2: se mejoro la web para realizar busquedas por campos. Se deja lista la imagen
 
 v3: se agrego la data de la temporada 2021-2022.
 
-## Comentarios
+## 📝 Comentarios
 
 - Cualquier cosa me avisan!!! Estoy en linea ;)
